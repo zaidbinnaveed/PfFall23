@@ -1,0 +1,5 @@
+Problem 1:![WhatsApp Image 2023-08-28 at 8 56 24 PM](https://github.com/zaidbinnaveed/PfFall23/assets/142867727/da2ac23d-55c7-4f3c-9a91-72ab80330dcf)
+Problem 2:![WhatsApp Image 2023-08-28 at 8 56 24 PM (1)](https://github.com/zaidbinnaveed/PfFall23/assets/142867727/e2916642-1774-406a-8aaa-167b9b1a6c79)
+Problem 3:![WhatsApp Image 2023-08-28 at 8 56 24 PM (1)](https://github.com/zaidbinnaveed/PfFall23/assets/142867727/fdec7eb4-30fd-4ee7-83e4-cbc5a3fe59ba)
+Problem 4:![WhatsApp Image 2023-08-28 at 8 56 25 PM](https://github.com/zaidbinnaveed/PfFall23/assets/142867727/54fc6dfa-8c0c-4d1d-b31b-a7fa69b8d8f0)
+Problem 5:![WhatsApp Image 2023-08-28 at 8 56 25 PM (1)](https://github.com/zaidbinnaveed/PfFall23/assets/142867727/4bc80c12-bf9e-4742-9500-bacc05e9ca70)
