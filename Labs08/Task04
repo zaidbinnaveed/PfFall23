@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(){
+	char str[100];
+	char pass[10]={"Secure123\0"};
+	printf("Enter your password:  ");
+	fgets(str,sizeof(str),stdin);
+	
+   int i,count=-1;
+   for(i=0;i<100;i++){
+   	count++;
+   	if(str[i] == '\0'){
+   		break;
+	   }
+   }
+      if(count>=8){
+      	printf("Login Successful!");
+      }
+      	else{
+      		if(strcmp(str,pass)){
+      			printf("Login Failed!Invalid Passowrd!");
+		}
+      		
+			}
+		  
+	  return 0;
+  }
