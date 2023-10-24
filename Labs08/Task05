@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+
+int main(){
+	int num;
+	printf("Enter numeric part of your car:");
+	scanf("%d",&num);
+	
+	int day;
+	printf("Enter day(1-7):");
+	scanf("%d",&day);
+	if(decideCarUsage(num,day)){
+		printf("You can use your car today");
+	}
+	else{
+		printf("You can not use your car today");
+	}
+	
+}
+	
+	
+	
+int decideCarUsage(int num, int day){
+		if(num%2==day%2){
+			return 1;
+		}
+		else{
+			return 0;
+		}
+	}
