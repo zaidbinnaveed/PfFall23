@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+// Function to find GCD of two numbers using loops
+int gcdWithLoop(int a, int b) {
+    int temp;
+    while (b != 0) {
+        temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+// Function to find GCD of two numbers using recursion
+int gcdWithRecursion(int a, int b) {
+    if (b == 0) {
+        return a; // Base case: GCD(a, 0) is a
+    } else {
+        return gcdWithRecursion(b, a % b); // Recursive case: GCD(a, b) = GCD(b, a % b)
+    }
+}
+
+int main() {
+    int num1, num2;
+
+    // Input two numbers from the user
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+
+    // Calculate and print GCD using loops
+    printf("GCD using loops: %d\n", gcdWithLoop(num1, num2));
+
+    // Calculate and print GCD using recursion
+    printf("GCD using recursion: %d\n", gcdWithRecursion(num1, num2));
+
+    return 0;
+}
