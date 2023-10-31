@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+// Function to find product of two numbers using recursion and addition
+int multiply(int a, int b) {
+    // Base case: if either of the numbers is 0, the product is 0
+    if (a == 0 || b == 0) {
+        return 0;
+    }
+    // If b is negative, negate the result and call the function with positive b
+    else if (b < 0) {
+        return -multiply(a, -b);
+    }
+    // Recursive case: add 'a' repeatedly 'b' times to get the product
+    else {
+        return a + multiply(a, b - 1);
+    }
+}
+
+int main() {
+    int num1, num2;
+    
+    // Input two numbers from the user
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    
+    // Call the function to find the product and print the result
+    printf("Product: %d\n", multiply(num1, num2));
+    
+    return 0;
+}
