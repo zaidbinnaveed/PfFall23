@@ -1,0 +1,57 @@
+*
+*\\Programmer:Zaid Bin Naveed
+*\\Date:6th November,2023
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int N;
+
+    // Get user input for the size of arrays
+    printf("Enter the size of arrays (N): ");
+    scanf("%d", &N);
+
+    // Seed for random number generation
+    srand(time(NULL));
+
+    // Create arrays of different data types using variable length arrays
+    char charArray[N];
+    int intArray[N];
+    long long int longArray[N];
+
+    // Initialize arrays with random values
+    for (int i = 0; i < N; ++i) {
+        charArray[i] = rand() % 128; // random char values between 0 and 127
+        intArray[i] = rand();
+        longArray[i] = rand();
+    }
+
+    // Print addresses and values using pointer arithmetic for char array
+    printf("\nChar Array:\n");
+    for (int i = 0; i < N; ++i) {
+        printf("Address: %p, Value: %d\n", (void*)&charArray[i], charArray[i]);
+    }
+
+    // Print addresses and values using pointer arithmetic for int array
+    printf("\nInt Array:\n");
+    for (int i = 0; i < N; ++i) {
+        printf("Address: %p, Value: %d\n", (void*)&intArray[i], intArray[i]);
+    }
+
+    // Print addresses and values using pointer arithmetic for long long int array
+    printf("\nLong Long Int Array:\n");
+    for (int i = 0; i < N; ++i) {
+        printf("Address: %p, Value: %lld\n", (void*)&longArray[i], longArray[i]);
+    }
+
+    // Explanation for pointer arithmetic with different types
+    printf("\nExplanation:\n");
+    printf("Pointer arithmetic works differently with different data types because the size of each element in memory differs.\n");
+    printf("When you add an integer value to a pointer, the pointer is incremented by the size of an integer (in bytes).\n");
+    printf("Similarly, when you add a character value to a pointer, the pointer is incremented by the size of a char (in bytes).\n");
+    printf("The same principle applies to other data types like long long int, float, double, etc.\n");
+
+    return 0;
+}
