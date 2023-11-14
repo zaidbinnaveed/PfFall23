@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+void printArray(void *arr, size_t size, char dataType) {
+    size_t i;
+
+    switch (dataType) {
+        case 'i': // integer
+            for (i = 0; i < size / sizeof(int); ++i) {
+                printf("%d ", *((int*)arr + i));
+            }
+            break;
+        case 'f': // float
+            for (i = 0; i < size / sizeof(float); ++i) {
+                printf("%f ", *((float*)arr + i));
+            }
+            break;
+        case 'd': // double
+            for (i = 0; i < size / sizeof(double); ++i) {
+                printf("%lf ", *((double*)arr + i));
+            }
+            break;
+        default:
+            printf("Unsupported data type\n");
+            return;
+    }
+
+    printf("\n");
+}
+
+int main() {
+    int intArray[] = {1, 2, 3, 4, 5};
+    float floatArray[] = {1.1, 2.2, 3.3, 4.4, 5.5};
+    double doubleArray[] = {1.111, 2.222, 3.333, 4.444, 5.555};
+
+    printf("Printing integer array:\n");
+    printArray(intArray, sizeof(intArray), 'i');
+
+    printf("Printing float array:\n");
+    printArray(floatArray, sizeof(floatArray), 'f');
+
+    printf("Printing double array:\n");
+    printArray(doubleArray, sizeof(doubleArray), 'd');
+
+    return 0;
+}
