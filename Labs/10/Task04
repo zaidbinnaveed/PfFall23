@@ -1,0 +1,53 @@
+include <stdio.h>
+#include <string.h>
+
+// Function to reverse a word using pointer arithmetic
+void reverseWord(char *start, char *end) {
+    while (start < end) {
+        // Swap characters at start and end pointers
+        char temp = *start;
+        *start = *end;
+        *end = temp;
+
+        // Move the pointers towards each other
+        start++;
+        end--;
+    }
+}
+
+// Function to reverse each word in a sentence
+void reverseSentenceWords(char *sentence) {
+    char *start = sentence;
+    char *end = sentence;
+
+    // Iterate through each character in the sentence
+    while (*end != '\0') {
+        // If a space or the end of the sentence is encountered, reverse the word
+        if (*end == ' ' || *end == '\0') {
+            reverseWord(start, end - 1);
+            start = end + 1;
+        }
+
+        // Move to the next character
+        end++;
+    }
+}
+
+int main() {
+    char sentence[100];
+
+    // Input sentence
+    printf("Enter a sentence: ");
+    fgets(sentence, sizeof(sentence), stdin);
+
+    // Remove the newline character from the input
+    sentence[strcspn(sentence, "\n")] = '\0';
+
+    // Reverse each word in the sentence
+    reverseSentenceWords(sentence);
+
+    // Print the modified sentence
+    printf("Modified Sentence: %s\n", sentence);
+
+    return 0;
+}
