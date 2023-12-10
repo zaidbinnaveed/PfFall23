@@ -1,4 +1,1 @@
-ID  Name    Salary
-101 Zeeshan 45000
-102 Shiraz  55000
-103 Bilal   50000
+
